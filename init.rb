@@ -5,4 +5,8 @@ Redmine::Plugin.register :portfolio_manager do
   version '0.0.1'
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
+
+  menu :top_menu, :portfolio_management, { :controller => 'portfolio_management', :action => 'index' }, :caption => :portfolio_management_menu
+  settings default: { :portfolio_management_attribute => 'Portfolio'}, :partial => 'settings/redmine_portfolio_management_settings'
+
 end
